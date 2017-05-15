@@ -28,7 +28,7 @@ class Notifier
     while true
       check_seconds = frequency * 60 * 60
       fills(Time.now.utc - check_seconds).each do |fill|
-        next unless @fill_cache.include? fill['order_id']
+        next if @fill_cache.include? fill['order_id']
 
         puts fill['order_id']
         @fill_cache << fill['order_id']
