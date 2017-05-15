@@ -18,6 +18,12 @@ GDAX {{Value1}} {{Value2}}: {{Value3}}
 
 # Build
 
+```
+docker build -t gdax-notifier .
+```
+
+# Run
+
 Create a .env file with:
 
 ```
@@ -28,12 +34,6 @@ GDAX_API_PASS=
 MAKER_EVENT=
 MAKER_KEY=
 ```
-
-```
-docker build -t gdax-notifier .
-```
-
-# Run
 
 ```
 # background
